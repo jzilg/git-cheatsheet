@@ -1,0 +1,51 @@
+body {
+    padding-bottom: 15rem;
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+code {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #f5f7f9;
+    border-bottom: 1px solid #ddd;
+    border-left: 2px solid steelblue;
+    color: #666;
+    cursor: pointer;
+}
+
+code::after {
+    content: "copy to clipboard";
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+code:hover::after {
+    opacity: 1;
+}
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+a {
+    color: steelblue
+}
+
+.container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
