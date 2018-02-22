@@ -1,105 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Git Cheatsheet</title>
-        <link rel="icon" type="image/x-icon" href="git.ico">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <main class="container">
-            <h1>Git Cheatsheet</h1>
-            <ul id="toc"></ul>
-            <hr>
-            <article>
-                <h2>add</h2>
-                <code>
-                    git add .
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>reset</h2>
-                <code>
-                    git reset .
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>stash</h2>
-                <h3>save</h3>
-                <code>
-                    git stash
-                </code>
-                <h3>what is stashed?</h3>
-                <code>
-                    git stash list
-                </code>
-                <h3>delete</h3>
-                <code>
-                    git stash drop
-                </code>
-                <h3>release</h3>
-                <code>
-                    git stash pop
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>rebase</h2>
-                <p>
-                    <i>(while on target branch)</i>
-                </p>
-                <code>
-                    git rebase develop
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>undo all local chages</h2>
-                <code>
-                    git checkout -- .
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>revert last commit</h2>
-                <code>
-                    git reset HEAD~
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>rename last commit</h2>
-                <code>
-                    git commit --amend
-                </code>
-            </article>
-            <hr>
-            <article>
-                <h2>delete all local branches, if there are deleted origin</h2>
-                <code>
-                    git remote prune origin
-                </code>
-                <code>
-                	git gc
-                </code>
-            </article>
-        </main>
-        <script src="table-of-content.js"></script>
-        <script src="copy-to-clipboard.js"></script>
-        <script>
-            function clickHandler(event) {
-                const target = event.target
-                copyToClipboard(target)
-            }
+<head>
+    <meta charset="utf-8">
+    <title>Git Cheatsheet</title>
+    <link rel="icon" type="image/x-icon" href="git.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Git Cheatsheet</h1>
+        <ul id="toc"></ul>
+        <hr>
+        <article>
+            <h2>add</h2>
+            <code>
+                git add .
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>reset</h2>
+            <code>
+                git reset .
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>stash</h2>
+            <h3>save</h3>
+            <code>
+                git stash
+            </code>
+            <h3>what is stashed?</h3>
+            <code>
+                git stash list
+            </code>
+            <h3>delete</h3>
+            <code>
+                git stash drop
+            </code>
+            <h3>release</h3>
+            <code>
+                git stash pop
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>rebase</h2>
+            <p>
+                <i>(while on target branch)</i>
+            </p>
+            <code>
+                git rebase develop
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>undo all local chages</h2>
+            <code>
+                git checkout -- .
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>revert last commit</h2>
+            <code>
+                git reset HEAD~
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>rename last commit</h2>
+            <code>
+                git commit --amend
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>delete all local branches, if there are deleted origin</h2>
+            <code>
+                git remote prune origin
+            </code>
+            <code>
+                git gc
+            </code>
+        </article>
+    </main>
+    <script src="table-of-content.js"></script>
+    <script src="copy-to-clipboard.js"></script>
+    <script>
+        function clickHandler(event) {
+            const target = event.target
+            copyToClipboard(target)
+        }
 
-            const codeBlocks = document.querySelectorAll('code')
+        const codeBlocks = document.querySelectorAll('code')
 
-            for (let i = 0; i < codeBlocks.length; i++) {
-                const codeBlock = codeBlocks[i]
-                codeBlock.addEventListener('click', clickHandler)
-            }            
-        </script>
-    </body>
+        for (let i = 0; i < codeBlocks.length; i++) {
+            const codeBlock = codeBlocks[i]
+            codeBlock.addEventListener('click', clickHandler)
+        }
+    </script>
+</body>
 </html>
