@@ -85,6 +85,22 @@
                 git gc
             </code>
         </article>
+        <hr>
+        <article>
+            <h2>rename tag local an origin</h2>
+            <code>
+                git tag &lt;newName&gt; &lt;oldName&gt;
+            </code>
+            <code>
+                git tag -d &lt;oldName&gt;
+            </code>
+            <code>
+                git push origin :refs/tags/&lt;oldName&gt;
+            </code>
+            <code>
+                git push --tags
+            </code>
+        </article>
     </main>
     <script src="table-of-content.js"></script>
     <script src="copy-to-clipboard.js"></script>
