@@ -8,7 +8,9 @@
 
     for (let i = 0; i < subHeadings.length; i++) {
         const heading = subHeadings[i]
-        const id = heading.innerText.toLocaleLowerCase()
+        const id = heading.innerText
+            .toLocaleLowerCase()
+            .replace(/ /g, '-')
 
         const li = document.createElement('li')
         let link = document.createElement('a')
@@ -31,5 +33,5 @@
         }
 
         heading.id = id
-    }    
+    }
 })()
