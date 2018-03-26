@@ -41,7 +41,12 @@ h3 {
 }
 
 a {
-    color: steelblue
+    color: steelblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .container {
