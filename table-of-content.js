@@ -13,7 +13,7 @@
             .replace(/ /g, '-')
 
         const li = document.createElement('li')
-        let link = document.createElement('a')
+        const link = document.createElement('a')
         link.href = `#${id}`
         link.innerText = heading.innerText
 
