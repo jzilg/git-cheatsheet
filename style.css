@@ -40,6 +40,11 @@ h3 {
     font-weight: normal;
 }
 
+h2:target,
+h3:target {
+    font-weight: bold;
+}
+
 a {
     color: steelblue;
     text-decoration: none;
