@@ -115,6 +115,15 @@
                 git gc
             </code>
         </article>
+        <article>
+            <h2>delete all local tags, if there are deleted origin</h2>
+            <code>
+                git tag -l | xargs git tag -d
+            </code>
+            <code>
+                git fetch --tags
+            </code>
+        </article>
         <hr>
         <article>
             <h2>rename tag local and origin</h2>
