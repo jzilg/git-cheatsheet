@@ -86,16 +86,9 @@
         </article>
         <hr>
         <article>
-            <h2>undo all local chages</h2>
+            <h2>undo all uncommited chages</h2>
             <code>
-                git checkout -- .
-            </code>
-        </article>
-        <hr>
-        <article>
-            <h2>restore deleted file</h2>
-            <code>
-                git checkout HEAD &lt;file&gt;
+                git checkout .
             </code>
         </article>
         <hr>
@@ -107,9 +100,22 @@
         </article>
         <hr>
         <article>
-            <h2>rename last commit</h2>
+            <h2>restore deleted file</h2>
+            <code>
+                git checkout HEAD &lt;file&gt;
+            </code>
+        </article>
+        <hr>
+        <article>
+            <h2>redo last commit with new added files and rename it</h2>
             <code>
                 git commit --amend
+            </code>
+        </article>
+        <article>
+            <h2>delete all untracked files and directories</h2>
+            <code>
+                git clean -d
             </code>
         </article>
         <hr>
