@@ -162,19 +162,15 @@
         </article>
     </main>
     <script src="table-of-content.js"></script>
-    <script src="copy-to-clipboard.js"></script>
     <script>
-        function clickHandler(event) {
-            const target = event.target
-            copyToClipboard(target)
-        }
-
         const codeBlocks = document.querySelectorAll('code')
-
-        for (let i = 0; i < codeBlocks.length; i++) {
-            const codeBlock = codeBlocks[i]
-            codeBlock.addEventListener('click', clickHandler)
+        const copyToClipboard = (text) => {
+            window.navigator.clipboard.writeText(text)
         }
+
+        codeBlocks.forEach((codeBlock) => {
+            codeBlock.addEventListener('click', (event) => copyToClipboard(event.target.innerText))
+        })
     </script>
 </body>
 </html>
