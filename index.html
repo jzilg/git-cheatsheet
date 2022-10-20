@@ -19,9 +19,15 @@
         </article>
         <hr>
         <article>
-            <h2>force checkout from origin</h2>
+            <h2>local overrides</h2>
+            <h3>overwrite the complete local history of the current branch from its remote</h3>
             <code>
-                git reset --hard origin/master
+                git reset --hard origin/&lt;current-branch&gt;
+            </code>
+            <h3>reset the current-branch to remote HEAD</h3>
+            <p>(equivalent to deleting and recreating the current branch)</p>
+            <code>
+                git reset --hard origin/main
             </code>
         </article>
         <hr>
@@ -31,9 +37,13 @@
             <code>
                 git branch
             </code>
-            <h3>create</h3>
+            <h3>create and switch to new</h3>
             <code>
                 git checkout -b &lt;name&gt;
+            </code>
+            <h3>switch back to the previous local branch you've been working on</h3>
+            <code>
+                git checkout -
             </code>
             <h3>rename</h3>
             <code>
@@ -117,6 +127,18 @@
             <h2>redo last commit with new added files and rename it</h2>
             <code>
                 git commit --amend
+            </code>
+        </article>
+        <article>
+            <h2>soft reset</h2>
+            <h3>remove last commit by keeping all changes staged</h3>
+            <code>
+                git reset --soft HEAD~1
+            </code>
+            <h3>remove last "n" commits by keeping all changes staged</h3>
+            <p>(e.g. n = 4) </p>
+            <code>
+                git reset --soft HEAD~4
             </code>
         </article>
         <article>
